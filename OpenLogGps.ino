@@ -181,7 +181,7 @@ static struct commandArg cmd_arg[MAX_COUNT_COMMAND_LINE_ARGS];
 
 byte feedbackMode = (ECHO | EXTENDED_INFO);
 
-struct GPRMC_Data {                   //$GPRMC,161724.00,A,3857.22509,N,00859.99477,W,0.207,,311025,,,A*61
+struct GPRMC_Data {                   //$GPRMC,161724.00,A,3757.22509,N,00829.99477,W,0.207,,311025,,,A*21
   char time[11];    // hhmmss.sss
   char status;      // A = válido, V = inválido
   char lat[12];     // ddmm.mmmm
@@ -307,7 +307,7 @@ bool parseGPRMC_bytewise(GPRMC_Data *gps, char c) {
           gps->valid = (gps->status == 'A');
           state = 0;
           if (gps->valid)
-            {                                                                     //$GPRMC,161724.00,A,3857.22509,N,00859.99477,W,0.207,,311025,,,A*61
+            {                                                                     //$GPRMC,161724.00,A,3847.22509,N,00839.99477,W,0.207,,311025,,,A*31
               c= gps->date[0];                                                           
               gps->date[0]= gps->date[4];  //switch year with day to sort the file names automatically
               gps->date[4]= c;
@@ -788,7 +788,7 @@ byte appendFile(char* fileName)
         while (cnt < charsToRecord)
           {
             c= localBuffer[cnt];
-            if (parseGPRMC_bytewise(&gps, c)) //$GPRMC,161724.00,A,3857.22509,N,00859.99477,W,0.207,,311025,,,A*61
+            if (parseGPRMC_bytewise(&gps, c)) //$GPRMC,161724.00,A,3757.22509,N,00829.99477,W,0.207,,311025,,,A*31
               {                               //$GPRMC,,V,,,,,,,,,,N*53
                 if (decdaydigit != gps.date[4] || uniddaydigit != gps.date[5])
                   {             // day change, close current file and open another
