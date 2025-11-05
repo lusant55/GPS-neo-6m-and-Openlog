@@ -86,7 +86,7 @@ Os dados são guardados no cartão SD a cada minuto, num ficheiro de texto cujo 
 
 A data foi manipulada de modo a aparecer como AAMMDD, para ser mais fácil de ordenar.
 
-Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já convertidas para graus e a velocidade, por exemplo:
+Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já convertidas para graus e a velocidade em km/h, por exemplo:
 
 ```
 14:35:00; 38.71690; -9.13983; 0.740;
