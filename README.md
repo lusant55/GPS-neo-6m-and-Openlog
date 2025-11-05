@@ -103,7 +103,7 @@ Para programar o datalogger usa-se um conversor USB/TTL, tipo FTDI, ou semelhant
 A ligação entre os módulos deve ser cruzada, ou seja, o pino TX do GPS liga ao pino RX do datalogger.
 O pino RX do GPS deve ficar sem ligação (não é necessário).
 
-A maior parte do módulos que estão no mercado suportam 5 VDC, no entanto, é sempre bom verificar.
+A maior parte dos módulos que estão no mercado suportam 5 VDC, no entanto, é sempre bom verificar.
 
 
 
