@@ -95,7 +95,7 @@ Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já con
 14:38:00; 38.71685; -9.13996; 1.111;
 ```
 
-O programa original da Sparkfun mantém-se tal como estava, apenas com esta funcionalidade acrescentada (MODO_GPS).
+O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODO_GPS).
 
 
 Para programar o datalogger usa-se um conversor USB/TTL, tipo FTDI, ou semelhante.
