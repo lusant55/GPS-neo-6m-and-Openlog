@@ -43,7 +43,7 @@ Já com sinal suficiente para enviar hora/data:
 15:31:57  $GPGLL,,,,,153157.00,V,N*4E
 ```
 
-E sincronizado, enviando também as coordenadas, velocidade, altura, rumo, ...:
+E sincronizado, enviando também as coordenadas, velocidade, altura, rumo, ...
 ```
 16:16:29  $GPRMC,161629.00,A,3828.22358,N,00849.99768,W,3.805,,051125,,,A*4F
 16:16:29  $GPVTG,,T,,M,3.805,N,7.048,K,A*26
