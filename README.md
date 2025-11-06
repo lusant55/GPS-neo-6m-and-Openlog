@@ -97,13 +97,16 @@ Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já con
 
 O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODO_GPS).
 
+# Ligações
 
 Para programar o datalogger usa-se um conversor USB/TTL, tipo FTDI, ou semelhante.
+Ver https://learn.sparkfun.com/tutorials/openlog-hookup-guide/all
+https://cdn.sparkfun.com/assets/learn_tutorials/4/9/8/OpenLogFTDI.png
 
-A ligação entre os módulos deve ser cruzada, ou seja, o pino TX do GPS liga ao pino RX do datalogger.
-O pino RX do GPS deve ficar sem ligação (não é necessário).
+Para ligar o GPS ao datalogger deve a ligação entre os módulos deve ser cruzada, ou seja, o pino TX do GPS liga ao pino RX do datalogger.
+O pino RX do GPS deve ficar sem ligação (não é necessário). Para além de não ser necessária, é de bom tom saber que o Neo-6m não é tolerante a 5 V. 
 
-A maior parte dos módulos que estão no mercado suportam 5 VDC, no entanto, é sempre bom verificar.
+A maior parte dos módulos que estão no mercado têm um regulador de tensão que permite alimentação de 5 VDC, no entanto, é sempre bom verificar.
 
 
 
