@@ -85,7 +85,7 @@ $GPRMC,161629.00,A,3855.22358,N,00849.99768,W,3.805,,051125,,,A*5F
 		  |		 - sinc. (A)/ não sinc. (V)     
 		  - hora     
 ```
-Deste último formato podem retirar-se a hora, a longitude, a latitude, a data e a velocidade, mais do que suficiente para a maior parte das aplicações.
+Deste último formato pode retirar-se a hora, a longitude, a latitude, a data e a velocidade, mais do que suficiente para a maior parte das aplicações.
 
 Os dados são guardados no cartão SD a cada minuto, num ficheiro de texto cujo nome é a data em que foram obtidos e apenas o GPS estiver sincronizado. 
 
