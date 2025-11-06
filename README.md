@@ -9,8 +9,8 @@ Usa o datalogger da Sparkfun (https://github.com/sparkfun/OpenLog/tree/master) e
 O datalogger da Sparkfun é um módulo muito compacto (podia ser menos compacto e dar acesso fácil a alguns I/O não utilizados) que permite registar num cartão SD os dados recebidos no pino RX.
 Tem diferentes modos de funcionamento, mas nenhum deles está habilitado a fazer parser dos dados recebidos.
 
-O GPS Neo-6m da u-blox, é muito popular pela utilização simples. Basta ligar e usar a céu aberto que ele propaga tramas NMEA no pino TX (e pelas outras portas também, 
-apesar de nem todos os módulos à venda as disponibilizarem, por exemplo, usei, em simultâneo, a interface USB ligada a um PC com o software u-center, https://www.u-blox.com/en/product/u-center, e o 
+O GPS Neo-6m da u-blox, é muito popular pela utilização simples. Basta ligar e usar a céu aberto que ele propaga tramas NMEA no pino TX (e pelas outras interfaces também, 
+apesar de nem todos os módulos à venda as disponibilizarem, por exemplo, usei, **em simultâneo**, a interface USB ligada a um PC com o software u-center, https://www.u-blox.com/en/product/u-center, e o 
 pino TX ligado a um Arduino Uno).
 
 ## Software
@@ -96,6 +96,21 @@ Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já con
 ```
 
 O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODE_GPS).
+Quando o programa inicia, procura pelo ficheiro de configuração, "config.txt", e, se não existir, cria-o.
+O conteúdo do ficheiro de configuração é:
+´´´
+9600,36,3,4,1,1,0,100,100
+baud,escape,esc#,mode,verb,echo,ignoreRX,maxFilesize,maxFilenum
+´´´
+As diferenças para o ficheiro original são:
+´´´
+O caracter de escape para entrar no modo de configuração é o $ (36).
+O modo de funcionamento é o MODE_GPS (4).
+´´´
+
+De seguida, cria o ficheiro "dummy.txt". Este ficheiro só é utilizado no inicio para que o programa não fique preso e entre no ciclo que espera dados válidos 
+da trama $GPRMC ou 3 caracteres $ para entrar em modo de configuração.
+A partir daqui, fica a aguardar dados válidos e escreve-os, a cada minuto, num ficheiro de texto cujo nome é a data em que foram adquiridos.
 
 # Ligações
 
@@ -126,3 +141,4 @@ A maior parte dos módulos que estão no mercado têm um regulador de tensão qu
 
 
 
+$
