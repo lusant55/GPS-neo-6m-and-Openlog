@@ -85,10 +85,8 @@ $GPRMC,161629.00,A,3855.22358,N,00849.99768,W,3.805,,051125,,,A*5F
 		  |		 - sinc. (A)/ não sinc. (V)     
 		  - hora     
 ```
-Deste último formato pode retirar-se a hora, a longitude, a latitude, a data e a velocidade, mais do que suficiente para a maior parte das aplicações.
-
-Os dados são guardados no cartão SD a cada minuto, num ficheiro de texto cujo nome é a data em que foram obtidos e apenas o GPS estiver sincronizado. 
-
+Deste último formato pode retirar-se a hora, a longitude, a latitude, a data e a velocidade, mais do que suficiente para a maior parte das aplicações.  
+Os dados são guardados no cartão SD a cada minuto, num ficheiro de texto cujo nome é a data em que foram obtidos e apenas o GPS estiver sincronizado.  
 A data foi manipulada de modo a aparecer como AAMMDD, para ser mais fácil de ordenar.
 
 Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já convertidas para graus, e a velocidade em km/h, por exemplo:
@@ -102,8 +100,7 @@ Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já con
 
 O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODE_GPS).
 
-Quando o programa inicia, procura pelo ficheiro de configuração, "config.txt", e, se não existir, cria-o.
-
+Quando o programa inicia, procura pelo ficheiro de configuração, "config.txt", e, se não existir, cria-o.  
 O conteúdo do ficheiro de configuração é:
 ```
 9600,36,3,4,1,1,0,100,100
@@ -116,7 +113,7 @@ O modo de funcionamento é o MODE_GPS (4).
 ```
 
 De seguida, cria o ficheiro "dummy.txt". Este ficheiro só é utilizado no inicio para que o programa não fique preso e entre no ciclo que espera dados válidos 
-da trama $GPRMC ou 3 caracteres $ para entrar em modo de configuração.
+da trama $GPRMC ou 3 caracteres $ para entrar em modo de configuração.  
 A partir daqui, fica a aguardar dados válidos e escreve-os, a cada minuto, num ficheiro de texto cujo nome é a data em que foram adquiridos.
 
 # Ligações
