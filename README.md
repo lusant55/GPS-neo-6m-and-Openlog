@@ -59,6 +59,7 @@ Se registarmos as tramas sem qualquer tipo de filtro, guardamos muita coisa que 
 
 Assim, usei o software disponibilizado pela Sparkfun (https://github.com/sparkfun/OpenLog/tree/master/firmware/OpenLog_Firmware/OpenLog), acrescentei um novo modo de funcionamento, MODE_GPS, 
 fiz parsing à trama $GPRCM e guardei apenas os dados mais utilizados.
+
 A trama $GPRCM tem 3 tipos de formato:
 
 Não sincronizado:
