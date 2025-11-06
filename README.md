@@ -1,4 +1,7 @@
 # OpenLog GPS com Neo-6m
+<p align="center">
+  <img src="fotos/ligacoes.jpg" alt="Minha imagem" width="320" />
+</p>
 
 ## Objectivo
 Criar um modo simples de usar um GPS e guardar a posição dos locais onde passamos.
