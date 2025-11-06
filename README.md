@@ -95,7 +95,7 @@ Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já con
 14:38:00; 38.71685; -9.13996; 1.111;
 ```
 
-O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODO_GPS).
+O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODE_GPS).
 
 # Ligações
 
@@ -109,8 +109,10 @@ Ver https://learn.sparkfun.com/tutorials/openlog-hookup-guide/all
 
 
 
-Para ligar o GPS ao datalogger deve a ligação entre os módulos deve ser cruzada, ou seja, o pino TX do GPS liga ao pino RX do datalogger.
-O pino RX do GPS deve ficar sem ligação (não é necessário). Para além de não ser necessária, é de bom tom saber que o Neo-6m não é tolerante a 5 V. 
+Para ligar o GPS ao datalogger a ligação entre os módulos deve ser cruzada, ou seja, o pino TX do GPS liga ao pino RX do datalogger.
+O pino RX do GPS deve ficar sem ligação (não é necessário). 
+
+É de bom tom recorsdar que o Neo-6m não é tolerante a 5 V. 
 
 <p align="center">
   <img src="fotos/ligacoes.jpg" alt="Minha imagem" width="320" />
