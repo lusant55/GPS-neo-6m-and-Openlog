@@ -101,6 +101,7 @@ Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já con
 ```
 
 O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODE_GPS).
+
 Quando o programa inicia, procura pelo ficheiro de configuração, "config.txt", e, se não existir, cria-o.
 O conteúdo do ficheiro de configuração é:
 ´´´
