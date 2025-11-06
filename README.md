@@ -143,6 +143,3 @@ A maior parte dos módulos que estão no mercado têm um regulador de tensão qu
 
 
 
-
-
-$
