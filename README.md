@@ -1,4 +1,4 @@
-# OpenLog GPS com Neo-6m parsing NMEA $GPRMC
+# OpenLog GPS Neo-6m parsing NMEA $GPRMC
 <p align="center">
   <img src="fotos/ligacoes.jpg" alt="Minha imagem" width="320" />
 </p>
