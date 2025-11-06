@@ -9,7 +9,7 @@ Criar um modo simples de usar um GPS e guardar a posição dos locais onde passa
 ## Hardware
 Usa o datalogger da Sparkfun (https://github.com/sparkfun/OpenLog/tree/master) e um módulo GPS da u-blox, o Neo-6m (https://www.u-blox.com/en/product/neo-6-series).
 
-O datalogger da Sparkfun é um módulo muito compacto (podia ser menos compacto e dar acesso fácil a alguns I/O não utilizados) que permite registar num cartão SD os dados recebidos no pino RX.
+O datalogger da Sparkfun é um módulo muito compacto (podia ser menos compacto e dar acesso fácil a alguns I/O disponíveis) que permite registar num cartão SD os dados recebidos no pino RX.
 Tem diferentes modos de funcionamento, mas nenhum deles está habilitado a fazer parser dos dados recebidos.
 
 O GPS Neo-6m da u-blox, é muito popular pela utilização simples. Basta ligar e usar a céu aberto que ele propaga tramas NMEA no pino TX (e pelas outras interfaces também, 
