@@ -103,16 +103,17 @@ Os ficheiros guardados têm linhas com a hora, a longitude e a latitude, já con
 O programa original da Sparkfun mantêm-se tal como estava, apenas com esta funcionalidade acrescentada (MODE_GPS).
 
 Quando o programa inicia, procura pelo ficheiro de configuração, "config.txt", e, se não existir, cria-o.
+
 O conteúdo do ficheiro de configuração é:
-´´´
+```
 9600,36,3,4,1,1,0,100,100
 baud,escape,esc#,mode,verb,echo,ignoreRX,maxFilesize,maxFilenum
-´´´
+```
 As diferenças para o ficheiro original são:
-´´´
+```
 O caracter de escape para entrar no modo de configuração é o $ (36).
 O modo de funcionamento é o MODE_GPS (4).
-´´´
+```
 
 De seguida, cria o ficheiro "dummy.txt". Este ficheiro só é utilizado no inicio para que o programa não fique preso e entre no ciclo que espera dados válidos 
 da trama $GPRMC ou 3 caracteres $ para entrar em modo de configuração.
