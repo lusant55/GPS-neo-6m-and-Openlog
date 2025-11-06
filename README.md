@@ -20,6 +20,7 @@ pino TX ligado a um Arduino Uno).
 
 Ligando o pino TX do GPS ao pino RX do datalogger e escolhendo o Modo Rotate, este regista tudo o que se lhe enviar. 
 Acontece que as tramas NMEA não são de leitura fácil para humanos, nem o registo das mesmas é simples de utilizar sem uma referência temporal.
+
 O Neo-6m envia, a cada segundo, tramas cujo conteúdo depende do estado de sincronismo em que se encontra:
 
 Após ligar e não sincronizado:
