@@ -11,11 +11,19 @@ Usa o datalogger da Sparkfun (https://github.com/sparkfun/OpenLog/tree/master) e
 
 O datalogger da Sparkfun é um módulo muito compacto (podia ser menos compacto e dar acesso fácil a alguns I/O disponíveis) que permite registar num cartão SD os dados recebidos no pino RX.
 Tem diferentes modos de funcionamento, mas nenhum deles está habilitado a fazer parser dos dados recebidos.
+<p align="center">
+  <img src="fotos/OpenLog.jpg" alt="Minha imagem" width="320" />
+</p>
 
 O GPS Neo-6m da u-blox, é muito popular pela utilização simples. Basta ligar e usar a céu aberto que ele propaga tramas NMEA no pino TX (e pelas outras interfaces também, 
 apesar de nem todos os módulos à venda as disponibilizarem, por exemplo, usei, **em simultâneo**, a interface USB ligada a um PC com o software u-center, https://www.u-blox.com/en/product/u-center, e o 
 pino TX ligado a um Arduino Uno).
-
+<p align="center">
+  <img src="fotos/gps only with rxtx.png" alt="Minha imagem" width="320" />
+</p>
+<p align="center">
+  <img src="fotos/gps with usb and rxtx.jpg" alt="Minha imagem" width="320" />
+</p>
 ## Software
 
 Ligando o pino TX do GPS ao pino RX do datalogger e escolhendo o Modo Rotate, este regista tudo o que se lhe enviar. 
