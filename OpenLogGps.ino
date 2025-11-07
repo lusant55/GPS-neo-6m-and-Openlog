@@ -200,7 +200,10 @@ GPRMC_Data gps;
 char decdaydigit= 0; //used to detect day change and close currente day file
 char uniddaydigit= 0;   //used to detect day change and close currente day file
 char minut= -1;        //used to save data every minute
+//char decsec= -1;        //used to save data every 30 sec
+//char unidsec= -1;        //used to save data every 30 sec
 
+//#define SAVE_EVERY_30_SECONDS
 
 #include <stdint.h>
 
@@ -380,6 +383,8 @@ void systemError(byte errorType)
 void setup(void)
 {
   pinMode(stat1, OUTPUT);
+  
+
 
   //Power down various bits of hardware to lower power usage
   set_sleep_mode(SLEEP_MODE_IDLE);
@@ -678,7 +683,7 @@ byte appendFile(char* fileName)
   byte checkedSpot;
   byte escapeCharsReceived = 0;
 
-  const unsigned int MAX_IDLE_TIME_MSEC = 500; //The number of milliseconds before unit goes to sleep
+  const unsigned int MAX_IDLE_TIME_MSEC = 2000; //The number of milliseconds before unit goes to sleep
   unsigned long lastSyncTime = millis(); //Keeps track of the last time the file was synced
 
 #if DEBUG
@@ -787,6 +792,7 @@ byte appendFile(char* fileName)
       {
         while (cnt < charsToRecord)
           {
+            toggleLED(stat1); //Toggle the STAT1 LED each time we record the buffer
             c= localBuffer[cnt];
             if (parseGPRMC_bytewise(&gps, c)) //$GPRMC,161724.00,A,3757.22509,N,00829.99477,W,0.207,,311025,,,A*31
               {                               //$GPRMC,,V,,,,,,,,,,N*53
@@ -821,14 +827,20 @@ byte appendFile(char* fileName)
                       workingFile.sync();
                     }
                   }
-                if (minut != gps.time[4])  // write every minut
+                #ifdef SAVE_EVERY_30_SECONDS
+                if ((gps.time[6] == '3' && gps.time[7] == '0') || (gps.time[6] == '0' &&  gps.time[7] == '0'))  // write every 30 seconds
+                #else
+                if (minut != gps.time[4])  // write every minute
+                #endif
                   {                   
-                    sprintf_P(localBuffer, PSTR("%s; %s%ld.%ld; %s%ld.%ld; %ld.%ld;\n\r\0"), gps.time, (gps.ns == 'S') ? "-" : "", gps.llat / 100000, gps.llat % 100000, 
+                    sprintf_P(localBuffer, PSTR("%s; %s%ld.%05ld; %s%ld.%05ld; %ld.%03ld;\r\n\0"), gps.time, (gps.ns == 'S') ? "-" : "", gps.llat / 100000, gps.llat % 100000, 
                       (gps.ew == 'W') ? "-" : "", gps.llon / 100000, gps.llon % 100000, gps.kmh / 1000, gps.kmh % 1000);                    
                     cnt= charsToRecord;                    
                     workingFile.write(localBuffer, strlen (localBuffer)); 
-                    toggleLED(stat1); //Toggle the STAT1 LED each time we record the buffer
+                    //toggleLED(stat1); //Toggle the STAT1 LED each time we record the buffer
+                    
                     workingFile.sync();
+                    digitalWrite(stat1, HIGH);
                     minut= gps.time[4];
                     // NewSerial.println(gps.kmh);
                     // NewSerial.println(gps.kmh/1000);
