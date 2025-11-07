@@ -11,10 +11,21 @@ Usa o datalogger da Sparkfun (https://github.com/sparkfun/OpenLog/tree/master) e
 
 O datalogger da Sparkfun é um módulo muito compacto (podia ser menos compacto e dar acesso fácil a alguns I/O disponíveis) que permite registar num cartão SD os dados recebidos no pino RX.
 Tem diferentes modos de funcionamento, mas nenhum deles está habilitado a fazer parser dos dados recebidos.
+<p align="center">
+  <img src="fotos/OpenLog.jpg" alt="Minha imagem" width="320" />
+</p>
 
-O GPS Neo-6m da u-blox, é muito popular pela utilização simples. Basta ligar e usar a céu aberto que ele propaga tramas NMEA no pino TX (e pelas outras interfaces também, 
-apesar de nem todos os módulos à venda as disponibilizarem, por exemplo, usei, **em simultâneo**, a interface USB ligada a um PC com o software u-center, https://www.u-blox.com/en/product/u-center, e o 
-pino TX ligado a um Arduino Uno).
+O GPS Neo-6m da u-blox, é muito popular pela utilização simples. Basta ligar e usar a céu aberto que ele propaga tramas NMEA no pino TX, exemplos de módulos:
+<p align="center">
+  <img src="fotos/gps only with rxtx.png" alt="Minha imagem" width="320" />
+</p>
+<p align="center">
+  <img src="fotos/gps with usb and rxtx.jpg" alt="Minha imagem" width="320" />
+</p>
+
+Neste último modelo estão disponíveis 2 interfaces RX/TX e USB. É possível usá-las em **simultâneo**, a interface USB ligada a um PC com o software u-center, https://www.u-blox.com/en/product/u-center, e os 
+pinos RX/TX ligados a um MCU.
+
 
 ## Software
 
@@ -131,7 +142,6 @@ Ver https://learn.sparkfun.com/tutorials/openlog-hookup-guide/all
 Para ligar o GPS ao datalogger a ligação entre os módulos deve ser cruzada, ou seja, o pino TX do GPS liga ao pino RX do datalogger.
 O pino RX do GPS deve ficar sem ligação (não é necessário). 
 
-É de bom tom recordar que o Neo-6m não é tolerante a 5 V. 
 
 <p align="center">
   <img src="fotos/ligacoes.jpg" alt="Minha imagem" width="320" />
@@ -139,7 +149,8 @@ O pino RX do GPS deve ficar sem ligação (não é necessário).
 
 
 
-A maior parte dos módulos que estão no mercado têm um regulador de tensão que permite alimentação de 5 VDC, no entanto, é sempre bom verificar.
+A maior parte dos módulos que estão no mercado têm um regulador de tensão que permite alimentação de 5 VDC, no entanto, é sempre bom verificar.  
+É de bom tom recordar que o Neo-6m não é tolerante a 5 V. 
 
 
 
