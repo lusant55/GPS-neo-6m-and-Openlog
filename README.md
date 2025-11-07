@@ -141,7 +141,6 @@ Ver https://learn.sparkfun.com/tutorials/openlog-hookup-guide/all
 Para ligar o GPS ao datalogger a ligação entre os módulos deve ser cruzada, ou seja, o pino TX do GPS liga ao pino RX do datalogger.
 O pino RX do GPS deve ficar sem ligação (não é necessário). 
 
-É de bom tom recordar que o Neo-6m não é tolerante a 5 V. 
 
 <p align="center">
   <img src="fotos/ligacoes.jpg" alt="Minha imagem" width="320" />
@@ -149,7 +148,8 @@ O pino RX do GPS deve ficar sem ligação (não é necessário).
 
 
 
-A maior parte dos módulos que estão no mercado têm um regulador de tensão que permite alimentação de 5 VDC, no entanto, é sempre bom verificar.
+A maior parte dos módulos que estão no mercado têm um regulador de tensão que permite alimentação de 5 VDC, no entanto, é sempre bom verificar.  
+É de bom tom recordar que o Neo-6m não é tolerante a 5 V. 
 
 
 
