@@ -22,7 +22,7 @@ O GPS Neo-6m da u-blox, é muito popular pela utilização simples. Basta ligar 
 <p align="center">
   <img src="fotos/gps with usb and rxtx.jpg" alt="Minha imagem" width="320" />
 </p>
-Neste último modelo estão disponíveis 2 interfaces RX/TX e USB. É possível usá-las em simultâneo, a interface USB ligada a um PC com o software u-center, https://www.u-blox.com/en/product/u-center, e os 
+Neste último modelo estão disponíveis 2 interfaces RX/TX e USB. É possível usá-las em **simultâneo**, a interface USB ligada a um PC com o software u-center, https://www.u-blox.com/en/product/u-center, e os 
 pinos RX/TX ligado a um MCU.
 
 
