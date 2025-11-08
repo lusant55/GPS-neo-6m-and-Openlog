@@ -71,7 +71,7 @@ If we record plots without any kind of filter, we store a lot of unnecessary inf
 
 So, I used the software provided by Sparkfun ( https://github.com/sparkfun/OpenLog/tree/master/firmware/OpenLog_Firmware/OpenLog ), added a new operating mode, MODE_GPS, parsed the $GPRCM frame, and saved only the most frequently used data.
 
-The $GPRCM framework has 3 types of formats:
+The $GPRCM frame has 3 types of formats:
 
 Not synchronized:
 ```
