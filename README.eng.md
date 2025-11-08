@@ -7,9 +7,8 @@
 Create a simple way to use a GPS and save the location of the places we've been.
 
 ## Hardware
-Usa o datalogger da Sparkfun (https://github.com/sparkfun/OpenLog/tree/master) e um módulo GPS da u-blox, o Neo-6m (https://www.u-blox.com/en/product/neo-6-series).
 
-Use the datalogger from Sparkfun ( https://github.com/sparkfun/OpenLog/tree/master ) and a GPS module from u-blox, or Neo-6m ( https://www.u-blox.com/en/product/neo-6-series ).
+Use the datalogger from Sparkfun (https://github.com/sparkfun/OpenLog/tree/master) and a GPS module from u-blox, or Neo-6m (https://www.u-blox.com/en/product/neo-6-series).
 
 The Sparkfun datalogger is a very compact module (it could be less compact and provide easy access to some available I/O) that allows you to record data received on the RX pin onto an SD card. It has different operating modes, but none of them are enabled to parse the received data.
 
@@ -26,13 +25,13 @@ The u-blox Neo-6m GPS is very popular due to its ease of use. Simply plug it in 
   <img src="fotos/gps with usb and rxtx.jpg" alt="Minha imagem" width="320" />
 </p>
 
-This latest model has two RX/TX and USB interfaces available. It is possible to use them simultaneously : the USB interface connected to a PC with the u-center software, https://www.u-blox.com/en/product/u-center , and the RX/TX pins connected to an MCU.
+This latest model has two interfaces available, RX/TX and USB . It is possible to use them **simultaneously**, the USB interface connected to a PC with the u-center software, https://www.u-blox.com/en/product/u-center , and the RX/TX pins connected to an MCU.
 
 
 
 ## Software
 
-By connecting the GPS's TX pin to the datalogger's RX pin and selecting Rotate Mode, it records everything you send to it. However, NMEA frames are not easy for humans to read, nor is recording them simple to use without a time reference.
+By connecting the GPS's TX pin to the datalogger's RX pin and selecting Mode Rotate, it records everything you send to it. However, NMEA frames are not easy for humans to read, nor is recording them simple to use without a time reference.
 
 The Neo-6m sends out frames every second, the content of which depends on its current synchronization state.
 
