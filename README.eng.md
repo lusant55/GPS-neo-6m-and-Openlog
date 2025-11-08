@@ -100,7 +100,7 @@ From this last format, one can extract the time, longitude, latitude, date, and 
 The data is saved to the SD card every minute in a text file whose name is the date it was obtained, and only the GPS is synchronized.
 The date has been manipulated to appear as YYMMDD for easier sorting.
 
-The saved files contain lines with time, longitude, and latitude, already converted to degrees, and speed in km/h, for example:
+The saved files contain lines with time, longitude, and latitude, already converted to degrees and speed in km/h, for example:
 
 ```
 14:35:00; 38.71690; -9.13983; 0.740;
