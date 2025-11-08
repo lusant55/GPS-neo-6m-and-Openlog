@@ -96,7 +96,7 @@ $GPRMC,161629.00,A,3855.22358,N,00849.99768,W,3.805,,051125,,,A*5F
 		  |		 - sinc. (A)/ not sinc. (V)     
 		  - hour     
 ```
-From this last format, one can extract the time, longitude, latitude, date, and speed, more than enough for most applications.
+From this last format, one can extract the time, longitude, latitude, date and speed, more than enough for most applications.
 The data is saved to the SD card every minute in a text file whose name is the date it was obtained, and only the GPS is synchronized.
 The date has been manipulated to appear as YYMMDD for easier sorting.
 
