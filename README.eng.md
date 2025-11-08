@@ -55,7 +55,7 @@ We already have enough signal to send the time/date:
 15:31:57  $GPGLL,,,,,153157.00,V,N*4E
 ```
 
-And it's synchronized, also sending coordinates, speed, altitude, heading, ...
+And it's synchronized, also sending coordinates, speed, altitude, course, ...
 ```
 16:16:29  $GPRMC,161629.00,A,3828.22358,N,00849.99768,W,3.805,,051125,,,A*4F
 16:16:29  $GPVTG,,T,,M,3.805,N,7.048,K,A*26
