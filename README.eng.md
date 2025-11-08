@@ -97,10 +97,10 @@ $GPRMC,161629.00,A,3855.22358,N,00849.99768,W,3.805,,051125,,,A*5F
 		  - hour     
 ```
 From this last format, one can extract the time, longitude, latitude, date and speed, more than enough for most applications.
-The data is saved to the SD card every minute in a text file whose name is the date it was obtained, and only the GPS is synchronized.
+The data is saved to the SD card every minute in a text file whose name is the date it was obtained, and only if the GPS is synchronized.
 The date has been manipulated to appear as YYMMDD for easier sorting.
 
-The saved files contain lines with time, longitude, and latitude, already converted to degrees and speed in km/h, for example:
+The saved files contain lines with time, longitude and latitude, already converted to degrees, and speed in km/h, for example:
 
 ```
 14:35:00; 38.71690; -9.13983; 0.740;
