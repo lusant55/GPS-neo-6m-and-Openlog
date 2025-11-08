@@ -130,7 +130,7 @@ From here, you wait for valid data and write it, every minute, to a text file wh
 
 To program the datalogger, a USB/TTL converter, such as an FTDI or similar, is used.
 
-Ver https://learn.sparkfun.com/tutorials/openlog-hookup-guide/all
+See https://learn.sparkfun.com/tutorials/openlog-hookup-guide/all
 
 <p align="center">
   <img src="https://cdn.sparkfun.com/assets/learn_tutorials/4/9/8/OpenLogFTDI.png" alt="Minha imagem" width="320" />
