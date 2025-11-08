@@ -89,7 +89,7 @@ $GPRMC,161629.00,A,3855.22358,N,00849.99768,W,3.805,,051125,,,A*5F
 		  |		 |     |      |     |       |   |       |
 		  |		 |     |      |     |       |   |       - date
 		  |		 |     |      |     |       |   - speed       
-		  |		 |     |      |     |       - East/Weste   
+		  |		 |     |      |     |       - East/West   
 		  |		 |     |      |     - latitude
 		  |		 |     |      - North/South
 		  |		 |     - longitude
