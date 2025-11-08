@@ -87,14 +87,14 @@ And synchronized:
 ```
 $GPRMC,161629.00,A,3855.22358,N,00849.99768,W,3.805,,051125,,,A*5F
 		  |		 |     |      |     |       |   |       |
-		  |		 |     |      |     |       |   |       - data
-		  |		 |     |      |     |       |   - velocidade       
-		  |		 |     |      |     |       - Este/Oeste   
+		  |		 |     |      |     |       |   |       - date
+		  |		 |     |      |     |       |   - speed       
+		  |		 |     |      |     |       - East/Weste   
 		  |		 |     |      |     - latitude
-		  |		 |     |      - Norte/Sul
+		  |		 |     |      - North/South
 		  |		 |     - longitude
-		  |		 - sinc. (A)/ não sinc. (V)     
-		  - hora     
+		  |		 - sinc. (A)/ not sinc. (V)     
+		  - hour     
 ```
 From this last format, one can extract the time, longitude, latitude, date, and speed, more than enough for most applications.
 The data is saved to the SD card every minute in a text file whose name is the date it was obtained, and only the GPS is synchronized.
@@ -119,14 +119,14 @@ baud,escape,esc#,mode,verb,echo,ignoreRX,maxFilesize,maxFilenum
 ```
 The differences from the original file are:
 ```
-O caracter de escape para entrar no modo de configuração é o $ (36).
-O modo de funcionamento é o MODE_GPS (4).
+The escape character to enter in configuration mode is $ (36).
+The mode is MODE_GPS (4).
 ```
 
 Next, it creates the "dummy.txt" file. This file is only used at the beginning so that the program doesn't get stuck and enter the loop that waits for valid data from the $GPRMC frame or 3 characters $ to enter configuration mode.
 From here, you wait for valid data and write it, every minute, to a text file whose name is the date it was acquired.
 
-# Ligações
+# Connections
 
 To program the datalogger, a USB/TTL converter, such as an FTDI or similar, is used.
 
